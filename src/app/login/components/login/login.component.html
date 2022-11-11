@@ -1,0 +1,29 @@
+<div class="login-container">
+  <form class="login-form" [formGroup]="alumnoData" (ngSubmit)="login()"> 
+
+    <div class="form-outline mb-4">
+      
+      
+      <label class="form-label" >Matricula (1 al 6)</label>
+      <input type="text" id="matricula" name="matricula" class="form-control" formControlName="matricula" />
+      <label class="form-label" >EndPoint: https://635b17776f97ae73a63caff7.mockapi.io/angular/alumnos</label>
+      <div class="error" *ngIf="alumnoData.get('matricula')?.errors?.['matricula']">
+        <small class="error">Se requiere la matricula</small>
+    </div>    
+    </div>
+
+
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+      
+  
+    
+    </div>
+  
+
+    <button type="submit" class="btn btn-primary btn-block mb-4">Login</button>
+  
+  
+    </div>
+  </form>
+</div>
